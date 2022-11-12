@@ -5,6 +5,7 @@ import FindScreen from "../Screen/FindScreen";
 import PostScreen from "../Screen/PostScreen";
 import ChatScreen from "../Screen/ChatScreen";
 import ProfilScreen from "../Screen/ProfilScreen";
+import FavScreen from "../Screen/FavScreen";
 import { Image, View ,Text} from "react-native";
 const Tab = createBottomTabNavigator();
 
@@ -58,6 +59,22 @@ const Tabs =() => {
                     }}
                     />
                     <Text style={{color:focused}} >POST</Text>
+                </View>
+
+            )
+        }} 
+        />
+                 <Tab.Screen name="Fav" component={FavScreen} options={{
+            tabBarIcon:({focused}) => (
+                <View style={{alignItems:'center', justifyContent:'center', }}>
+                    <Image source={require('../assets/fav.png')}
+                    resizeMode='contain'
+                    style={{
+                        width:35,
+                        height:30,
+                    }}
+                    />
+                    <Text style={{color:focused}} >FAV</Text>
                 </View>
 
             )
