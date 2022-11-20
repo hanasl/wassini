@@ -1,10 +1,11 @@
 import React  from "react";
 import { View, Text, Button, StyleSheet } from "react-native";
-function FindScreen({navigation}) {
+import {useNavigation} from '@react-navigation/native';
+function FindScreen({}) {
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
         <Text>FindScreen</Text>
-        <Button title="Go to Home" onPress={() => navigation.navigate('Post')}/>
+        
       </View>
     );
   }

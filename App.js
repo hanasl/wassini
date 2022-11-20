@@ -1,17 +1,19 @@
 import { StatusBar } from "expo-status-bar";
+import "react-native-gesture-handler";
+import "react-native-reanimated";
 import { StyleSheet, Text, View } from "react-native";
+
 import * as React from "react";
 
 import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Tabs from "./navigation/Tabs";
 
-const Tab = createBottomTabNavigator();
+
+import DrawerNav from "./navigation/DrawrNav";
 
 export default function App() {
   return (
     <NavigationContainer>
-        <Tabs/>
+      <DrawerNav/>
     </NavigationContainer>
   );
 }

@@ -7,6 +7,7 @@ import ChatScreen from "../Screen/ChatScreen";
 import ProfilScreen from "../Screen/ProfilScreen";
 import FavScreen from "../Screen/FavScreen";
 import { Image, View ,Text} from "react-native";
+import Router from "./Router";
 const Tab = createBottomTabNavigator();
 
 const Tabs =() => {
@@ -17,7 +18,7 @@ const Tabs =() => {
         })
     }
          >
-        <Tab.Screen name="Home" component={HomeScreen} options={{
+        <Tab.Screen name={Router.Home} component={HomeScreen} options={{
             tabBarIcon:({focused}) => (
                 <View style={{alignItems:'center', justifyContent:'center', }}>
                     <Image source={require('../assets/home.png')}
@@ -32,7 +33,7 @@ const Tabs =() => {
 
             )
         }} />
-        <Tab.Screen name="Chat" component={ChatScreen} options={{
+        <Tab.Screen name={Router.Chat} component={ChatScreen} options={{
             tabBarIcon:({focused}) => (
                 <View style={{alignItems:'center', justifyContent:'center', }}>
                     <Image source={require('../assets/chat.png')}
@@ -48,7 +49,7 @@ const Tabs =() => {
             )
         }}
         />
-           <Tab.Screen name="Post" component={PostScreen} options={{
+           <Tab.Screen name={Router.Post} component={PostScreen} options={{
             tabBarIcon:({focused}) => (
                 <View style={{alignItems:'center', justifyContent:'center', }}>
                     <Image source={require('../assets/pluss.png')}
@@ -64,7 +65,7 @@ const Tabs =() => {
             )
         }} 
         />
-                 <Tab.Screen name="Fav" component={FavScreen} options={{
+                 <Tab.Screen name={Router.Fav} component={FavScreen} options={{
             tabBarIcon:({focused}) => (
                 <View style={{alignItems:'center', justifyContent:'center', }}>
                     <Image source={require('../assets/fav.png')}
@@ -80,24 +81,12 @@ const Tabs =() => {
             )
         }} 
         />
-        <Tab.Screen name="Find" component={FindScreen} options={{
-            tabBarIcon:({focused}) => (
-                <View style={{alignItems:'center', justifyContent:'center',}}>
-                    <Image source={require('../assets/cherche.png')}
-                    resizeMode='contain'
-                    style={{
-                        width:35,
-                        height:30,
-                    }}
-                    />
-                    <Text style={{color:focused}} >FIND</Text>
-                </View>
+        
+                
 
-            )
-        }}
-        />
+            
      
-        <Tab.Screen name="Profil" component={ProfilScreen} options={{
+        <Tab.Screen name={Router.Profil} component={ProfilScreen} options={{
             tabBarIcon:({focused}) => (
                 <View style={{alignItems:'center', justifyContent:'center', }}>
                     <Image source={require('../assets/profil.png')}
