@@ -23,7 +23,7 @@ import Feather from "react-native-vector-icons/Feather";
 function ProfilScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <View style={{ margin: 20 }}>
+      
         <View style={{ alignItems: "center" }}>
           <View
             style={{
@@ -105,7 +105,7 @@ function ProfilScreen({ navigation }) {
               styles.textInput}
           />
         </View>
-      </View>
+      
       <TouchableOpacity style={styles.commandButton} onPress={() => {}}>
           <Text style={styles.panelButtonTitle}>Submit</Text>
         </TouchableOpacity>
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
   commandButton: {
     padding: 15,
     borderRadius: 10,
-    backgroundColor: "#FF6347",
+    backgroundColor: "#F9F9",
     alignItems: "center",
     marginTop: 10,
   },
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
   panelButton: {
     padding: 13,
     borderRadius: 10,
-    backgroundColor: "#FF6347",
+    backgroundColor: "#F1F9",
     alignItems: "center",
     marginVertical: 7,
   },
