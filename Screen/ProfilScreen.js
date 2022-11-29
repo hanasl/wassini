@@ -34,16 +34,20 @@ function ProfilScreen({ navigation }) {
               alignItems: "center",
             }}
           >
-            <Avatar.Image source={require("../assets/menu.png")} size={80} />
-            <View style={{ marginLeft: 20 }}>
+            <Image source={require("../assets/menu.png")} style={{height: 100, width: 100}}
+                imageStyle={{borderRadius: 15}}></Image>
+             
+            
+          </View>
+          <View style={{ marginLeft: 20 }}>
               <Text style={{ marginTop: 10, fontSize: 18, fontWeight: "bold" }}>
                 John Doe
               </Text>
 
               <Caption style={styles.caption}>5555</Caption>
             </View>
-          </View>
         </View>
+        
         <View style={styles.action}>
           <FontAwesome name="user-o" size={20} />
           <TextInput
