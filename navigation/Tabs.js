@@ -12,11 +12,26 @@ import { useNavigation } from "@react-navigation/native";
 const Tab = createBottomTabNavigator();
 
 const Tabs = () => {
-  const navigation= useNavigation();
+  const navigation = useNavigation();
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
         tabBarShowLabel: false,
+        headerRight: ({ color, size, focused }) => {
+          return (
+            <TouchableOpacity onPress={() => navigation.openDrawer()}>
+              <Image
+                source={require("../assets/menu.png")}
+                resizeMode="contain"
+                style={{
+                  width: 35,
+                  height: 30,
+                  marginRight: 10,
+                }}
+              />
+            </TouchableOpacity>
+          );
+        },
       })}
     >
       <Tab.Screen
@@ -114,21 +129,7 @@ const Tabs = () => {
             </View>
           ),
           headerShown: true,
-          headerRight: ({ color, size, focused }) => {
-            return (
-              <TouchableOpacity onPress={() => navigation.openDrawer()}>
-                <Image
-                  source={require("../assets/menu.png")}
-                  resizeMode="contain"
-                  style={{
-                    width: 35,
-                    height: 30,
-                    marginRight:10,
-                  }}
-                />
-              </TouchableOpacity>
-            );
-          },
+         
         }}
       />
     </Tab.Navigator>
